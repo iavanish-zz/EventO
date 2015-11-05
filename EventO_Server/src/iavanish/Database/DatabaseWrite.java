@@ -152,7 +152,7 @@ public class DatabaseWrite extends DatabaseRead {
                 e.printStackTrace();
             }
             Statement stmt = (Statement)connection.createStatement();
-            String query = "UPDATE event SET Name = " + name + ", Date = " + date + ", Time = " + time + " WHERE EventID = " + eventID;
+            String query = "UPDATE event SET Name = '" + name + "', Date = '" + date + "', Time = '" + time + "' WHERE EventID = '" + eventID + "'";
             int records = stmt.executeUpdate(query);
             if(records > 0) {
                 updateStatus = true;

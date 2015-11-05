@@ -29,7 +29,7 @@ public class DatabaseRead {
         
     }
 
-    public static boolean checkLogin(String rollNo, String password) {
+    public static boolean login(String rollNo, String password) {
     	
         boolean isUserAvailable = false;
         Connection connection = null;
@@ -78,6 +78,58 @@ public class DatabaseRead {
         return isUserAvailable;
         
     }    
+    
+    public static List <User> viewAllUsers() {
+
+    	List <User> users = new ArrayList <User> ();
+    	
+        Connection connection = null;
+        
+        try {
+            
+        	try {
+                connection = createConnection();
+            }
+            catch(Exception e) {
+            	e.printStackTrace();
+            }
+            
+            Statement stmt = (Statement)connection.createStatement();
+            
+            String query = "SELECT * FROM user";
+
+            ResultSet rs = stmt.executeQuery(query);
+            
+            while(rs.next()) {
+            	User temp = new User(rs.getString(1), rs.getString(2), rs.getBoolean(4), rs.getString(5));
+            	users.add(temp);
+            }
+            
+        }
+        
+        catch(SQLException sqlE) {
+            sqlE.printStackTrace();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if(connection != null) {
+            	try {
+            		connection.close();
+            	}
+            	catch(SQLException sqlE) {
+            		sqlE.printStackTrace();
+            	}
+            	catch(Exception e) {
+            		e.printStackTrace();
+            	}
+            }
+        }
+        
+        return users;
+        
+    }
     
     public static List <Event> viewAllEvents() {
 
@@ -131,56 +183,4 @@ public class DatabaseRead {
         
     }
     
-    public static List <User> viewAllUsers() {
-
-    	List <User> users = new ArrayList <User> ();
-    	
-        Connection connection = null;
-        
-        try {
-            
-        	try {
-                connection = createConnection();
-            }
-            catch(Exception e) {
-            	e.printStackTrace();
-            }
-            
-            Statement stmt = (Statement)connection.createStatement();
-            
-            String query = "SELECT * FROM user";
-
-            ResultSet rs = stmt.executeQuery(query);
-            
-            while(rs.next()) {
-            	User temp = new User(rs.getString(1), rs.getString(2), rs.getBoolean(4), rs.getString(5));
-            	users.add(temp);
-            }
-            
-        }
-        
-        catch(SQLException sqlE) {
-            sqlE.printStackTrace();
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-        }
-        finally {
-            if(connection != null) {
-            	try {
-            		connection.close();
-            	}
-            	catch(SQLException sqlE) {
-            		sqlE.printStackTrace();
-            	}
-            	catch(Exception e) {
-            		e.printStackTrace();
-            	}
-            }
-        }
-        
-        return users;
-        
-    }
-	
 }
