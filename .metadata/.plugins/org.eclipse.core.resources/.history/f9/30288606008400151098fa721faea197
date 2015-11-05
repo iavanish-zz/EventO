@@ -1,0 +1,13 @@
+package iavanish;
+
+
+
+public class UtilityClass {
+
+    public static boolean isNotNull(String text) {
+        return (((text != null) && (text.trim().length() >= 0)) ? true : false);
+    }
+
+    
+ 
+}

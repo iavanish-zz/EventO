@@ -1,0 +1,16 @@
+
+
+import java.util.Map;
+
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+
+public class UtilityClass {
+
+    public static boolean isNotNull(String text) {
+        return (((text != null) && (text.trim().length() >= 0)) ? true : false);
+    }
+
+    
+ 
+}
