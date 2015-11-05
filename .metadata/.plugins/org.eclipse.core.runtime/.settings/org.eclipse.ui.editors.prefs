@@ -1,4 +1,5 @@
-AbstractTextEditor.Color.Background=206,231,255
+AbstractTextEditor.Color.Background=235,235,235
 AbstractTextEditor.Color.Background.SystemDefault=false
 eclipse.preferences.version=1
+lineNumberColor=153,153,153
 overviewRuler_migration=migrated_3.1
