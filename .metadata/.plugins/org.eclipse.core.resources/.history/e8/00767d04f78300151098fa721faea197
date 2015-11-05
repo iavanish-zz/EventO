@@ -1,0 +1,123 @@
+package iavanish;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+public class DBConnection {
+	
+    @SuppressWarnings("finally")
+	public static Connection createConnection() {
+    	
+        Connection connection = null;
+        
+        try {
+            Class.forName(Constants.dbClass);
+            connection = (Connection)DriverManager.getConnection(Constants.dbURL, Constants.dbUser, Constants.dbPassword);
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            return connection;
+        }
+        
+    }
+
+    public static boolean checkLogin(String rollNo, String password) {
+    	
+        boolean isUserAvailable = false;
+        Connection connection = null;
+        
+        try {
+            
+        	try {
+                connection = DBConnection.createConnection();
+            }
+            catch(Exception e) {
+            	e.printStackTrace();
+            }
+            
+            Statement stmt = (Statement)connection.createStatement();
+            
+            String query = "SELECT * FROM user WHERE RollNo = '" + rollNo + "' AND Password =" + "'" + password + "'";
+
+            ResultSet rs = stmt.executeQuery(query);
+            
+            while (rs.next()) {
+                isUserAvailable = true;
+            }
+            
+        }
+        
+        catch(SQLException sqlE) {
+            sqlE.printStackTrace();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            if(connection != null) {
+            	try {
+            		connection.close();
+            	}
+            	catch(SQLException sqlE) {
+            		sqlE.printStackTrace();
+            	}
+            	catch(Exception e) {
+            		e.printStackTrace();
+            	}
+            }
+        }
+        
+        return isUserAvailable;
+        
+    }
+
+    public static boolean insertUser(String rollNo, String name, String password, boolean typeOfUser, String emailID) {
+    	
+        boolean insertStatus = false;
+        Connection connection = null;
+        
+        try {
+            try {
+                connection = DBConnection.createConnection();
+            } 
+            catch(Exception e) {
+                e.printStackTrace();
+            }
+            Statement stmt = (Statement)connection.createStatement();
+            String query = "INSERT into user(RollNo, Name, Password, TypeOfUser, EmailID) values('" + rollNo + "'," + "'" + name + "','" + password + "','" + (typeOfUser ? 1 : 0) + "','" + emailID + "')";
+            int records = stmt.executeUpdate(query);
+            if(records > 0) {
+                insertStatus = true;
+            }
+        } 
+        catch(SQLException sqle) {
+            sqle.printStackTrace();
+        } 
+        catch(Exception e) {
+            e.printStackTrace();
+        } 
+        finally {
+            if(connection != null) {
+            	try {
+            		connection.close();
+            	}
+            	catch(SQLException sqlE) {
+            		sqlE.printStackTrace();
+            	}
+            	catch(Exception e) {
+            		e.printStackTrace();
+            	}
+            }
+        }
+        
+        return insertStatus;
+        
+    }
+    
+}

@@ -1,0 +1,11 @@
+package iavanish;
+
+public class User {
+
+	public String rollNo;
+	public String name;
+	public String password;
+	public boolean typeOfUser;
+	public String emailID;
+	
+}
