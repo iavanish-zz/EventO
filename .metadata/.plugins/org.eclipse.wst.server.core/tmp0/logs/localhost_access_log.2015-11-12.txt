@@ -1,0 +1,7 @@
+127.0.0.1 - - [12/Nov/2015:11:43:30 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Nov/2015:11:43:40 +0530] "GET /EventO_Server/ HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [12/Nov/2015:11:44:42 +0530] "GET /EventO_Server/login/login/?rollNo=MT14004&password=Easy@123 HTTP/1.1" 200 40
+192.168.43.202 - - [12/Nov/2015:11:47:56 +0530] "GET /EventO_Server/login/login/?rollNo=MT14004&password=Easy@123 HTTP/1.1" 200 40
+192.168.43.1 - - [12/Nov/2015:11:51:57 +0530] "GET /EventO_Server/login/login?rollNo=MT14004&password=Easy%40123 HTTP/1.1" 200 40
+127.0.0.1 - - [12/Nov/2015:12:10:36 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Nov/2015:12:10:37 +0530] "GET /EventO_Server/ HTTP/1.1" 404 -

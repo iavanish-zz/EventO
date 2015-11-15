@@ -38,3 +38,11 @@
 0:0:0:0:0:0:0:1 - - [06/Nov/2015:04:32:07 +0530] "GET /EventO_Server/viewAllEvents/viewAllEvents HTTP/1.1" 200 117
 0:0:0:0:0:0:0:1 - - [06/Nov/2015:04:32:32 +0530] "GET /EventO_Server/viewAllUsers/viewAllUsers HTTP/1.1" 200 221
 0:0:0:0:0:0:0:1 - - [06/Nov/2015:04:34:42 +0530] "GET /EventO_Server/deleteEvent/deleteEvent?eventID=1234567 HTTP/1.1" 200 46
+127.0.0.1 - - [06/Nov/2015:22:13:41 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [06/Nov/2015:22:13:43 +0530] "GET /EventO_Server/ HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [06/Nov/2015:22:17:30 +0530] "GET /EventO_Server/ HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [06/Nov/2015:22:18:42 +0530] "GET /EventO_Server/login/login/ HTTP/1.1" 200 72
+0:0:0:0:0:0:0:1 - - [06/Nov/2015:22:19:24 +0530] "GET /EventO_Server/login/login/?rollNo=MT14004&password=Easy@123 HTTP/1.1" 200 40
+0:0:0:0:0:0:0:1 - - [06/Nov/2015:22:21:11 +0530] "GET /EventO_Server/login/login/?rollNo=MT14004&password=Easy@123 HTTP/1.1" 200 40
+0:0:0:0:0:0:0:1 - - [06/Nov/2015:22:21:30 +0530] "GET /EventO_Server/login/login/?rollNo=MT14004&password=Easy@1234 HTTP/1.1" 200 72
+0:0:0:0:0:0:0:1 - - [06/Nov/2015:22:22:26 +0530] "GET /EventO_Server/viewAllUsers/viewAllUsers HTTP/1.1" 200 221

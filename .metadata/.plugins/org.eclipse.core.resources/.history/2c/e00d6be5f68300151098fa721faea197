@@ -1,5 +1,0 @@
-package iavanish;
-
-public class DatabaseWrite extends DatabaseRead {
-
-}

@@ -1,0 +1,11 @@
+package iavanish.Database;
+
+public class Constants {
+
+	public static String dbClass = "com.mysql.jdbc.Driver";
+    private static String dbName= "evento";
+    public static String dbURL = "jdbc:mysql://223.231.115.55:3306/" + dbName;
+    public static String dbUser = "root";
+    public static String dbPassword = "cse500";
+	
+}

@@ -1,0 +1,30 @@
+
+http://192.168.55.42:8080/EventO_Server/login/login?rollNo=MT14004&password=Easy@123
+
+
+
+http://192.168.55.42:8080/EventO_Server/userRegistration/userRegistration?rollNo=MT14014&name=Manisha Dubey&password=1234&emailID=manisha1414@iiitd.ac.in
+
+
+
+http://192.168.55.42:8080/EventO_Server/updateProfile/updateProfile?rollNo=MT14044&name=Avanish Singh&password=Easy@1234&emailID=avanish1404@iiitd.ac.in
+
+
+
+http://192.168.55.42:8080/EventO_Server/addEvent/addEvent?eventID=1234&name=SC Project Submission&date=16/11/2015&time=23:59&rollNo=MT14004
+
+
+
+http://192.168.55.42:8080/EventO_Server/modifyEvent/modifyEvent?eventID=1234&name=SC Project Submission&date=16/11/2015&time=23:58
+
+
+
+http://192.168.55.42:8080/EventO_Server/deleteEvent/deleteEvent?eventID=1234
+
+
+
+http://192.168.55.42:8080/EventO_Server/viewAllEvents/viewAllEvents
+
+
+
+http://192.168.55.42:8080/EventO_Server/viewAllUsers/viewAllUsers
