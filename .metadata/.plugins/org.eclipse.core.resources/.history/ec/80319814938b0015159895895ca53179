@@ -200,7 +200,7 @@ public class DatabaseRead {
             
             Statement stmt = (Statement)connection.createStatement();
             
-            String query = "SELECT * FROM user WHERE RollNo = '" + rollNo + "'";
+            String query = "SELECT * FROM user WHERE RollNo = " + rollNo;
 
             ResultSet rs = stmt.executeQuery(query);
             

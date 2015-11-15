@@ -114,29 +114,5 @@ public class UtilityClass {
     	return eventsObj.toString();
     	
     }
-    
-    public static String constructJSON(User user) {
-    	
-    	JSONObject userObj = new JSONObject();
-    			
-    	try {
-    		
-    		JSONObject temp = new JSONObject();
-			temp.put("rollNo", user.rollNo);
-			temp.put("name", user.name);
-			temp.put("typeOfUser", user.typeOfUser);
-			temp.put("emailID", user.emailID);
-    		
-    		userObj.put("user", temp);
-    		
-    	}
-    	
-    	catch(JSONException e) {
-    		e.printStackTrace();
-    	}
-    	
-    	return userObj.toString();
-    	
-    }
  
 }
