@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="D:\Codes\EventO\EventO_Server\lib" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="D:\Codes\EventO\EventO_Server_Secured\lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
 		<item value="true" key="create_unimplemented"/>

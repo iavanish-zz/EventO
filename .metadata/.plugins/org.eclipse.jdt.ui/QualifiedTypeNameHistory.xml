@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
 <fullyQualifiedTypeName name="iavanish.Database.DatabaseRead"/>
 <fullyQualifiedTypeName name="iavanish.Database.Event"/>
+<fullyQualifiedTypeName name="java.security.SecureRandom"/>
 </qualifiedTypeNameHistroy>
